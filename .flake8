@@ -1,0 +1,8 @@
+[flake8]
+max-line-length = 79
+
+# B901: return statements in generators -- allowed in Python 3
+# E722: duplicate of B001
+# N803: argument name should be lowercase, e.g. `X`
+# N806: variable in function should be lowercase, e.g. `X`, `G`
+extend-ignore = B901, E722, N803, N806
