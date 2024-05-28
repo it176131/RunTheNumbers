@@ -32,6 +32,7 @@ dev = [
     "isort",
     "flake8",
     "mypy",
+    "pre-commit",
     "pytest",
 ]
 
