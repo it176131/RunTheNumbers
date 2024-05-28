@@ -1,3 +1,40 @@
+[build-system]
+requires = ["setuptools >= 69.5.1", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "RunTheNumbers"
+dependencies = [
+    "pydantic>=2.7.1",
+]
+requires-python = ">= 3.11"
+authors = [{name = "Ian Thompson"}]
+maintainers = [{name = "Ian Thompson"}]
+description = "Tools for analyzing rental properties."
+readme = "README.md"
+keywords = ["rental", "property", "real", "estate", "analysis"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Real Estate Investors & Analysts",
+    "Topic :: Real Estate :: Tools",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/it176131/RunTheNumbers"
+Issues = "https://github.com/it176131/RunTheNumbers/issues"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+    "pytest",
+]
+
 [tool.black]
 line-length = 79
 
