@@ -3,6 +3,13 @@ repos:
     rev: v1.2.3
     hooks:
     -   id: trailing-whitespace
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.6
+    hooks:
+        # Run the linter.
+    -   id: ruff
+        # Run the formatter
+    -   id: ruff-format
 -   repo: https://github.com/PyCQA/isort
     rev: 5.11.5
     hooks:
