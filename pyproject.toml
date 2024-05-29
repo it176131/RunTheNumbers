@@ -48,3 +48,4 @@ known_local_folder = ["rtn"]
 
 [tool.ruff]
 line-length = 79
+fix = true
