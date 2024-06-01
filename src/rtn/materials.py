@@ -2,11 +2,13 @@ from datetime import date
 
 from pydantic.main import BaseModel
 
+from .base import RoofMaterial
+
 
 class Roof(BaseModel):
     """Roof materials and costs."""
 
-    material: str
+    material: RoofMaterial
     cost: float
     life_expectancy: tuple[int, int]
     install_date: date | None
