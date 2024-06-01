@@ -10,17 +10,19 @@ repos:
     -   id: ruff
         # Run the formatter
     -   id: ruff-format
--   repo: https://github.com/PyCQA/isort
-    rev: 5.11.5
+-   repo: local
     hooks:
     -   id: isort
+        entry: isort
         name: isort (python)
--   repo: https://github.com/psf/black
-    rev: 23.1.0
-    hooks:
+        language: system
     -   id: black
--   repo: https://github.com/PyCQA/flake8
-    rev: 5.0.4
-    hooks:
+        entry: black
+        name: black
+        language: system
+        types: [python]
     -   id: flake8
+        entry: flake8
+        name: flake8
+        language: system
         types: [file, python]
