@@ -1,7 +1,19 @@
-class Roof:
+from datetime import date
+
+from pydantic.main import BaseModel
+
+
+class Roof(BaseModel):
     """Roof materials and costs."""
 
-    ...
+    material: str
+    cost: float
+    life_expectancy: tuple[int, int]
+    install_date: date | None
+    current_age: float
+    is_damaged: bool
+    tree_coverage: bool
+    square_footage: float
 
 
 class Gutters: ...
