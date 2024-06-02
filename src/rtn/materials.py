@@ -2,7 +2,7 @@ from datetime import date
 
 from pydantic.main import BaseModel
 
-from .base import RoofMaterial
+from .base.enums import RoofMaterial
 
 
 class Roof(BaseModel):

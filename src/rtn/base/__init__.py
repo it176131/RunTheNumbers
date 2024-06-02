@@ -1,17 +1,5 @@
 from dataclasses import dataclass
-from enum import Enum
 from functools import wraps
-
-
-class RoofMaterial(Enum):
-    """Type of roof material."""
-
-    Asphalt: str = "Asphalt"
-    Wood: str = "Wood"
-    Metal: str = "Metal"
-    Clay: str = "Clay"
-    Slate: str = "Slate"
-    Other: str = "Other"
 
 
 @dataclass(init=True, repr=True, eq=True)
