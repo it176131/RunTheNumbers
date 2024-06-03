@@ -13,6 +13,7 @@ A basic wall consists of three parts:
     3. Studs := 2x4 pieces of lumber running vertically every 16".
 """
 
+from pydantic.fields import computed_field
 from pydantic.main import BaseModel
 
 
@@ -27,6 +28,14 @@ class Wall(BaseModel):
     """
 
     length: float
+
+    @computed_field
+    @property
+    def number_of_studs(self) -> float:
+        """The number of studs needed for the :class:``Wall``."""
+        inches = self.length * 12
+        spacing = 16.0
+        return inches / spacing + 1
 
 
 class Framing:
