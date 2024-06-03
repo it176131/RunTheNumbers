@@ -1,3 +1,7 @@
+class Plate:
+    """A 2x4 piece of lumber running horizontally."""
+
+
 class Framing:
     """Interior framing materials.
 
