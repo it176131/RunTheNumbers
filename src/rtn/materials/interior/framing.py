@@ -29,7 +29,7 @@ class Wall(BaseModel):
 
     length: float
 
-    @computed_field
+    @computed_field  # type: ignore[misc]
     @property
     def number_of_studs(self) -> float:
         """The number of studs needed for the :class:``Wall``."""

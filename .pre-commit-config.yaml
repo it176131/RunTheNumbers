@@ -26,3 +26,8 @@ repos:
         name: flake8
         language: system
         types: [file, python]
+    -   id: mypy
+        entry: mypy
+        name: mypy
+        language: system
+        types: [python]
