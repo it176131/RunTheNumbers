@@ -13,16 +13,20 @@ A basic wall consists of three parts:
     3. Studs := 2x4 pieces of lumber running vertically every 16".
 """
 
+from pydantic.main import BaseModel
+
 
 class Plate:
     """A 2x4 piece of lumber running horizontally."""
 
 
-class Wall:
+class Wall(BaseModel):
     """A basic wall.
 
     A wall is made of a bottom plate, a top plate, and studs.
     """
+
+    length: float
 
 
 class Framing:
