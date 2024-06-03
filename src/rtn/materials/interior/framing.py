@@ -18,6 +18,13 @@ class Plate:
     """A 2x4 piece of lumber running horizontally."""
 
 
+class Wall:
+    """A basic wall.
+
+    A wall is made of a bottom plate, a top plate, and studs.
+    """
+
+
 class Framing:
     """Interior framing materials."""
 
