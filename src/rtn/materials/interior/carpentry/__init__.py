@@ -34,3 +34,18 @@ types of tasks is that if and when he runs into an issue, he's likely
 more equipped to come up with a creative solution that most other
 contractors.
 """
+
+from pydantic.main import BaseModel
+
+
+class Carpenter(BaseModel):
+    """A good carpenter isn't cheap.
+
+    But given that great carpentry can sell (or rent) a house and bad
+    carpentry can keep you from selling (or renting) a house, he is
+    worth every penny. If your carpenter has an apprentice, expect to
+    pay less for the apprentice's time than the carpenter's, depending
+    on how skilled he is.
+    """
+
+    ...
