@@ -19,6 +19,7 @@ repos:
         entry: isort
         name: isort (python)
         language: system
+        types: [python]
     -   id: black
         entry: black
         name: black
