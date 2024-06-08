@@ -48,4 +48,6 @@ class Carpenter(BaseModel):
     on how skilled he is.
     """
 
-    ...
+    name_first: str
+    name_last: str
+    hourly_rate: float
