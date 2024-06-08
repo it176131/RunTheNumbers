@@ -18,4 +18,19 @@ tasks:
     - Install doors
     - Install windows
     - Finish trim
+
+There are many tasks on a renovation that a good carpenter can perform.
+In fact, a carpenter can be thought of as a jack of all trades who can
+generally do not only all the wood-related work, but also all the stuff
+that may not require a specialty carpenter. For example, mounting the
+microwave, installing appliances, mounting mirrors in bathrooms,
+installing backsplash behind kitchen counters, and installing doorknobs
+and mini blinds.
+
+While a handyman can do a lot of these tasks and a carpenter will cost
+a little bit more, his work will generally be cleaner than the
+handyman's. The other nice thing about using a carpenter for these
+types of tasks is that if and when he runs into an issue, he's likely
+more equipped to come up with a creative solution that most other
+contractors.
 """
