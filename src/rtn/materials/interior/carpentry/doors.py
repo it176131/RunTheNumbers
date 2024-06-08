@@ -13,6 +13,10 @@ a little money by just buying the slab, replacing a slab instead of the
 entire jamb can be more work for your carpenter. Additionally, you'll
 often end up paying extra to fix doors that aren't plumb or don't lock
 properly.
+
+It's highly recommended that when replacing a door, pay the few extra
+bucks to get a pre-hung door. The carpenter will appreciate it, and
+you'll save yourself some headaches, even if it costs a bit more.
 """
 
 
