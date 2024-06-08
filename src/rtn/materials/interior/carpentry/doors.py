@@ -19,8 +19,10 @@ bucks to get a pre-hung door. The carpenter will appreciate it, and
 you'll save yourself some headaches, even if it costs a bit more.
 """
 
+from pydantic.main import BaseModel
 
-class Doors:
+
+class Door(BaseModel):
     """A good carpenter can install an interior door in ~20 minutes.
 
     French and sliding glass doors may take two to three hours. The
