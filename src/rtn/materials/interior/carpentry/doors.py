@@ -20,4 +20,11 @@ you'll save yourself some headaches, even if it costs a bit more.
 """
 
 
-class Doors: ...
+class Doors:
+    """A good carpenter can install an interior door in ~20 minutes.
+
+    French and sliding glass doors may take two to three hours. The
+    hourly rate a carpenter charges to install doors can be quite high.
+    """
+
+    ...
