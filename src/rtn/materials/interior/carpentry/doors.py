@@ -19,7 +19,45 @@ bucks to get a pre-hung door. The carpenter will appreciate it, and
 you'll save yourself some headaches, even if it costs a bit more.
 """
 
+from enum import Enum
+
 from pydantic.main import BaseModel
+
+
+class DoorType(Enum):
+    """Type of door.
+
+    Can be one of the following:
+      - Prehung
+      - Slab
+    """
+
+    Prehung: str = "Prehung"
+    Slab: str = "Slab"
+
+
+class DoorStyle:
+    """Style of the door.
+
+    Can be one of the following:
+      - Hinged
+      - Barn
+      - Glass
+      - Closet
+      - Bifold
+      - Sliding
+      - French
+      - Pockets
+    """
+
+    Hinged: str = "Hinged"
+    Barn: str = "Barn"
+    Glass: str = "Glass"
+    Closet: str = "Closet"
+    Bifold: str = "Bifold"
+    Sliding: str = "Sliding"
+    French: str = "French"
+    Pocket: str = "Pocket"
 
 
 class Door(BaseModel):
@@ -29,4 +67,6 @@ class Door(BaseModel):
     hourly rate a carpenter charges to install doors can be quite high.
     """
 
-    ...
+    material_cost: float
+    door_type: DoorType
+    door_style: DoorStyle
