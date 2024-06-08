@@ -13,7 +13,7 @@ rather than later, and you'll find your renovations going more quickly
 and more smoothly than you can imagine. Bring in a bad carpenter, and
 all you'll find is frustration and a questionable looking renovation.
 
-This ``carpentry`` package will holld the bread-and-butter carpentry
+This ``carpentry`` package will hold the bread-and-butter carpentry
 tasks:
     - Install doors
     - Install windows
