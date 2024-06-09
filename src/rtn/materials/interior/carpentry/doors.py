@@ -73,6 +73,24 @@ class TextureType(Enum):
     Smooth: str = "Smooth"
 
 
+class FinishType(Enum):
+    """Finish of the door.
+
+    Can be one of the following:
+      - Finished
+      - Primed
+      - Stained
+      - Unfinished
+      - Painted
+    """
+
+    Finished: str = "Finished"
+    Primed: str = "Primed"
+    Stained: str = "Stained"
+    Unfinished: str = "Unfinished"
+    Painted: str = "Painted"
+
+
 class Door(BaseModel):
     """A good carpenter can install an interior door in ~20 minutes.
 
@@ -89,3 +107,4 @@ class Door(BaseModel):
     brand: str
     height: float
     width: float
+    finish: FinishType
