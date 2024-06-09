@@ -21,6 +21,7 @@ you'll save yourself some headaches, even if it costs a bit more.
 
 from enum import Enum
 
+from pydantic.fields import Field
 from pydantic.main import BaseModel
 
 
@@ -36,7 +37,7 @@ class DoorType(Enum):
     Slab: str = "Slab"
 
 
-class DoorStyle:
+class DoorStyle(Enum):
     """Style of the door.
 
     Can be one of the following:
@@ -69,7 +70,7 @@ class Door(BaseModel):
 
     cost: float
     material: str
-    panel_count: int
+    panels: int = Field(ge=0, le=8)
     typ: DoorType
     style: DoorStyle
     brand: str
