@@ -71,3 +71,5 @@ class Door(BaseModel):
     typ: DoorType
     style: DoorStyle
     brand: str
+    height: float
+    width: float
