@@ -69,6 +69,9 @@ class TextureType(Enum):
       - Smooth
     """
 
+    Textured: str = "Textured"
+    Smooth: str = "Smooth"
+
 
 class Door(BaseModel):
     """A good carpenter can install an interior door in ~20 minutes.
