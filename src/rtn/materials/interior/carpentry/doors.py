@@ -143,6 +143,8 @@ class StrikePlate(BaseModel):
     """Door strike plate."""
 
     cost: float
+    brand: str
+    color: str
 
 
 class DoorKnob(BaseModel):
