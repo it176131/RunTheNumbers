@@ -125,21 +125,22 @@ class Door(BaseModel):
     door_handing: DoorHanding
 
 
-class KnobType(Enum):
-    """Type of door knob.
+class LockFunction(Enum):
+    """Lock function of a door knob.
 
     Can be one of the following:
       - Privacy (i.e., bed/bath)
       - Passage (i.e., hall/closet)
-      - Dummy (i.e., non-functioning)
+      - Unkeyed (i.e., non-functioning)
     """
 
     Privacy: str = "Privacy"
     Passage: str = "Passage"
-    Dummy: str = "Dummy"
+    Unkeyed: str = "Unkeyed"
 
 
 class DoorKnob(BaseModel):
     """A door knob."""
 
-    typ: KnobType
+    typ: LockFunction
+    brand: str
