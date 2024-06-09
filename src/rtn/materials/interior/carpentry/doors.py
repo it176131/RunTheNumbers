@@ -91,6 +91,20 @@ class FinishType(Enum):
     Painted: str = "Painted"
 
 
+class DoorHanding(Enum):
+    """Handing of the door.
+
+    Can be one of the following:
+      - Right
+      - Left
+      - Reversible
+    """
+
+    Right: str = "Right"
+    Left: str = "Left"
+    Reversible: str = "Reversible"
+
+
 class Door(BaseModel):
     """A good carpenter can install an interior door in ~20 minutes.
 
@@ -108,3 +122,4 @@ class Door(BaseModel):
     height: float
     width: float
     finish: FinishType
+    door_handling: DoorHanding
