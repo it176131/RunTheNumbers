@@ -158,8 +158,9 @@ class DoorKnob(BaseModel):
 
 
 class Door(BaseModel):
-    """A good carpenter can install an interior door in ~20 minutes.
+    """An interior door.
 
+    A good carpenter can install an interior door in ~20 minutes.
     French and sliding glass doors may take two to three hours. The
     hourly rate a carpenter charges to install doors can be quite high.
     """
