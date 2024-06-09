@@ -13,7 +13,37 @@ and getting a feel for the style of windows that are typical in the
 houses you plan to renovate.
 """
 
+from enum import Enum
+
 from pydantic.main import BaseModel
+
+
+class WindowStyle(Enum):
+    """Style of the window.
+
+    Can be one of the following:
+      - Single
+      - Double
+      - Sliding
+      - Casement
+      - Picture
+      - Bay
+      - Skylight
+      - Awning
+      - GlassBlock
+      - Hopper
+    """
+
+    Single: str = "Single"
+    Double: str = "Double"
+    Sliding: str = "Sliding"
+    Casement: str = "Casement"
+    Picture: str = "Picture"
+    Bay: str = "Bay"
+    Skylight: str = "Skylight"
+    Awning: str = "Awning"
+    GlassBlock: str = "GlassBlock"
+    Hopper: str = "Hopper"
 
 
 class Window(BaseModel):
@@ -32,3 +62,7 @@ class Window(BaseModel):
     replace windows very quickly, and paying hourly will keep the
     per-window price to a minimum.
     """
+
+    cost: float
+    brand: str
+    style: WindowStyle
