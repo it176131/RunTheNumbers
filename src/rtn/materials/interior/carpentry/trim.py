@@ -27,3 +27,7 @@ class Trim(BaseModel):
     jobs, you can base the labor price off the hourly price of your
     carpenter.
     """
+
+    cost: float
+    house_square_footage: float
+    linear_footage: float
