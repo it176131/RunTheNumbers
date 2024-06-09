@@ -61,6 +61,15 @@ class DoorStyle(Enum):
     Pocket: str = "Pocket"
 
 
+class TextureType(Enum):
+    """Texture of the door.
+
+    Can be one of the following:
+      - Textured
+      - Smooth
+    """
+
+
 class Door(BaseModel):
     """A good carpenter can install an interior door in ~20 minutes.
 
@@ -70,6 +79,7 @@ class Door(BaseModel):
 
     cost: float
     material: str
+    texture: TextureType
     panels: int = Field(ge=0, le=8)
     typ: DoorType
     style: DoorStyle
