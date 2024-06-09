@@ -46,8 +46,36 @@ class Carpenter(BaseModel):
     worth every penny. If your carpenter has an apprentice, expect to
     pay less for the apprentice's time than the carpenter's, depending
     on how skilled he is.
+
+    Depending on whether your carpenter charges by the hour or by the
+    task will ultimately determine what you're paying for a job (by the
+    hour is often cheaper if your carpenter is reliable and works
+    diligently). Because a carpenter's job will be pretty diverse on a
+    particular day, until you actually sit down and work through a
+    specific scope of work, it will be hard to determine the price for
+    individual tasks.
+
+    For example, one carpenter might take 15 minutes to install an
+    interior door and another might take 30 minutes. If they were to
+    charge by the task, the prices for each would likely be pretty
+    close. But if they charged hourly, the slower carpenter would cost
+    about twice as much. Therefore, it would seem like an hourly wage
+    is better. But each project will have its challenges, and if a big
+    challenge comes up that requires a large amount of time to fix,
+    paying an hourly wage could end up being the more expensive option.
+    There are risks and trade-offs with each method, though I tend to
+    prefer to get a fixed price bid on each job based on the specific
+    list of tasks.
+
+    Carpenters tend to be on the job for relatively long periods of
+    time, so paying them on a weekly basis, or after completing certain
+    milestones, is how payment is typically handled. You should be
+    prepared to provide all material, though a good carpenter will have
+    connections to local lumberyards and supply houses and should be
+    able to get most of the material delivered to the project.
     """
 
     name_first: str
     name_last: str
     hourly_rate: float
+    task_rate: float
