@@ -78,6 +78,20 @@ class WindowUse(Enum):
     NewConstruction: str = "NewConstruction"
 
 
+class Glazing(Enum):
+    """Glazing type of the window, i.e., the number of panes.
+
+    Can be one of the following:
+      - SinglePane
+      - DoublePane
+      - TriplePane
+    """
+
+    SinglePane: str = "SinglePane"
+    DoublePane: str = "DoublePane"
+    TriplePane: str = "TriplePane"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -100,3 +114,4 @@ class Window(BaseModel):
     style: WindowStyle
     frame_material: FrameMaterial
     window_use_type: WindowUse
+    glazing: Glazing
