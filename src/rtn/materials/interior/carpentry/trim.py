@@ -47,7 +47,7 @@ class MoldingUse(Enum):
 
 
 class MoldingMaterial(Enum):
-    """Material the modling is made of.
+    """Material the molding is made of.
 
     Can be one of the following:
       - StainlessSteel
@@ -95,7 +95,7 @@ class MoldingMaterial(Enum):
 
 
 class FinishType(Enum):
-    """Type of modling finish.
+    """Type of trim finish.
 
     Can be one of the following:
       - Primed
@@ -113,7 +113,7 @@ class FinishType(Enum):
 
 
 class InstallationType(Enum):
-    """Type of molding installation.
+    """Type of trim installation.
 
     Can be one of the following:
       - Nail
@@ -140,6 +140,30 @@ class InstallationType(Enum):
     ClickInterlocking: str = "ClickInterlocking"
     FullyBondedAdhesive: str = "FullyBondedAdhesive"
     PerimeterBondAdhesive: str = "PerimeterBondAdhesive"
+
+
+class Durability(Enum):
+    """Durability of the trim.
+
+    Can be one of the following:
+      - MoistureResistant
+      - RotResistant
+      - TermiteResistant
+      - NotApplicable
+      - SplitResistant
+      - RustResistant
+      - ScratchResistant
+      - Tempered
+    """
+
+    MoistureResistant: str = "MoistureResistant"
+    RotResistant: str = "RotResistant"
+    TermiteResistant: str = "TermiteResistant"
+    NotApplicable: str = "NotApplicable"
+    SplitResistant: str = "SplitResistant"
+    RustResistant: str = "RustResistant"
+    ScratchResistant: str = "ScratchResistant"
+    Tempered: str = "Tempered"
 
 
 class Trim(BaseModel):
@@ -171,3 +195,4 @@ class Trim(BaseModel):
     material: MoldingMaterial
     finish_type: FinishType
     installation_type: InstallationType
+    durability: Durability
