@@ -46,6 +46,54 @@ class MoldingUse(Enum):
     General: str = "General"
 
 
+class MoldingMaterial(Enum):
+    """Material the modling is made of.
+
+    Can be one of the following:
+      - StainlessSteel
+      - Polyurethane
+      - Aluminum
+      - SolidWood
+      - Wood
+      - PVC
+      - Acrylic
+      - Composite
+      - Steel
+      - Vinyl
+      - WhiteOak
+      - Hickory
+      - Maple
+      - Bamboo
+      - Laminate
+      - MDF, i.e., Medium Density Fiberboard
+      - Plastic
+      - Polystyrene
+      - Polymer
+      - Fiberglass
+    """
+
+    StainlessSteel: str = "StainlessSteel"
+    Polyurethane: str = "Polyurethane"
+    Aluminum: str = "Aluminum"
+    SolidWood: str = "SolidWood"
+    Wood: str = "Wood"
+    PVC: str = "PVC"
+    Acrylic: str = "Acrylic"
+    Composite: str = "Composite"
+    Steel: str = "Steel"
+    Vinyl: str = "Vinyl"
+    WhiteOak: str = "WhiteOak"
+    Hickory: str = "Hickory"
+    Maple: str = "Maple"
+    Bamboo: str = "Bamboo"
+    Laminate: str = "Laminate"
+    MDF: str = "MDF"
+    Plastic: str = "Plastic"
+    Polystyrene: str = "Polystyrene"
+    Polymer: str = "Polymer"
+    Fiberglass: str = "Fiberglass"
+
+
 class Trim(BaseModel):
     """Finish trim.
 
@@ -70,3 +118,4 @@ class Trim(BaseModel):
     linear_footage: float
     trim_type: TrimType
     molding_user: MoldingUse
+    material: MoldingMaterial
