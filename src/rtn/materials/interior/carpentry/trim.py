@@ -50,3 +50,4 @@ class Trim(BaseModel):
     house_square_footage: float
     linear_footage: float
     trim_type: TrimType
+    brand: str
