@@ -67,6 +67,6 @@ class Door(BaseModel):
     hourly rate a carpenter charges to install doors can be quite high.
     """
 
-    material_cost: float
-    door_type: DoorType
-    door_style: DoorStyle
+    cost: float
+    typ: DoorType
+    style: DoorStyle
