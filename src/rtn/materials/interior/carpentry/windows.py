@@ -46,6 +46,22 @@ class WindowStyle(Enum):
     Hopper: str = "Hopper"
 
 
+class FrameMaterial(Enum):
+    """Material of the window frame.
+
+    Can be one of the following:
+      - Vinyl
+      - Aluminum
+      - WoodClad
+      - Composite
+    """
+
+    Vinyl: str = "Vinyl"
+    Aluminum: str = "Aluminum"
+    WoodClad: str = "WoodClad"
+    Composite: str = "Composite"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -66,3 +82,4 @@ class Window(BaseModel):
     cost: float
     brand: str
     style: WindowStyle
+    frame_material: FrameMaterial
