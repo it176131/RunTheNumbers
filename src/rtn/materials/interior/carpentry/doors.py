@@ -139,9 +139,31 @@ class LockFunction(Enum):
     Unkeyed: str = "Unkeyed"
 
 
+class LockStyle(Enum):
+    """Style of the door lock.
+
+    Can be one of the following:
+      - Classic
+      - Modern
+      - Contemporary
+      - Rustic
+      - Antique
+      - Vintage
+    """
+
+    Classic: str = "Classic"
+    Modern: str = "Modern"
+    Contemporary: str = "Contemporary"
+    Rustic: str = "Rustic"
+    Antique: str = "Antique"
+    Vintage: str = "Vintage"
+
+
 class DoorKnob(BaseModel):
     """A door knob."""
 
     typ: LockFunction
     brand: str
     color: str
+    style: LockStyle
+    cost: float
