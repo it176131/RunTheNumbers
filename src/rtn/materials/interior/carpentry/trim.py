@@ -9,10 +9,12 @@ Finish trim generally includes the following:
 
 from enum import Enum
 
-from pydantic.main import BaseModel
+from pydantic.fields import computed_field
+
+from ....base import BaseModel
 
 
-class TrimType(Enum):
+class TrimType(str, Enum):
     """Type of trim.
 
     Can be one of the following:
@@ -28,7 +30,7 @@ class TrimType(Enum):
     WindowCasing: str = "WindowCasing"
 
 
-class MoldingUse(Enum):
+class MoldingUse(str, Enum):
     """Use of the molding.
 
     Can be one of the following:
@@ -46,7 +48,7 @@ class MoldingUse(Enum):
     General: str = "General"
 
 
-class MoldingMaterial(Enum):
+class MoldingMaterial(str, Enum):
     """Material the molding is made of.
 
     Can be one of the following:
@@ -94,7 +96,7 @@ class MoldingMaterial(Enum):
     Fiberglass: str = "Fiberglass"
 
 
-class FinishType(Enum):
+class FinishType(str, Enum):
     """Type of trim finish.
 
     Can be one of the following:
@@ -112,7 +114,7 @@ class FinishType(Enum):
     Stained: str = "Stained"
 
 
-class InstallationType(Enum):
+class InstallationType(str, Enum):
     """Type of trim installation.
 
     Can be one of the following:
@@ -142,7 +144,7 @@ class InstallationType(Enum):
     PerimeterBondAdhesive: str = "PerimeterBondAdhesive"
 
 
-class Durability(Enum):
+class Durability(str, Enum):
     """Durability of the trim.
 
     Can be one of the following:
@@ -184,15 +186,25 @@ class Trim(BaseModel):
     carpenter.
     """
 
-    cost: float
+    cost_per_foot: float
     brand: str
     house_square_footage: float
     linear_footage: float
     width: float
     color: str
     trim_type: TrimType
-    molding_user: MoldingUse
+    molding_use: MoldingUse
     material: MoldingMaterial
     finish_type: FinishType
     installation_type: InstallationType
     durability: Durability
+
+    @computed_field  # type: ignore[misc]
+    @property
+    def total_cost(self) -> float:
+        """Total cost of trim.
+
+        Cost is calculated using :attribute:``Trim.cost_per_foot`` and
+        :attribute:``Trim.linear_footage``.
+        """
+        return self.cost_per_foot * self.linear_footage
