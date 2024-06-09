@@ -178,3 +178,5 @@ class Window(BaseModel):
     exterior_color: str
     grid_pattern: GridPattern
     window_type: WindowType
+    width: float
+    height: float
