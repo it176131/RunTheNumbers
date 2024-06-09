@@ -176,3 +176,4 @@ class Door(BaseModel):
     finish: FinishType
     door_handing: DoorHanding
     door_knob: DoorKnob
+    strike_plate: StrikePlate
