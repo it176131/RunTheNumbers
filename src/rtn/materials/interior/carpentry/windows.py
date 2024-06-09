@@ -47,7 +47,7 @@ class WindowStyle(Enum):
 
 
 class Window(BaseModel):
-    """Window replacement.
+    """A Window.
 
     Standard double-hung replacement windows come in a variety of sizes,
     styles, and qualities. For most low- to mid-level renovations, it is
