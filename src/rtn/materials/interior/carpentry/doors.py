@@ -69,6 +69,7 @@ class Door(BaseModel):
 
     cost: float
     material: str
+    panel_count: int
     typ: DoorType
     style: DoorStyle
     brand: str
