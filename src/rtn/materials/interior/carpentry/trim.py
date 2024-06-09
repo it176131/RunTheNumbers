@@ -184,7 +184,7 @@ class Trim(BaseModel):
     carpenter.
     """
 
-    cost: float
+    cost_per_foot: float
     brand: str
     house_square_footage: float
     linear_footage: float
