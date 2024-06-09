@@ -8,7 +8,14 @@ from pydantic.main import BaseModel as PydanticBaseModel
 class BaseModel(PydanticBaseModel):
     """Global config for BaseModel."""
 
-    model_config = ConfigDict(use_enum_values=True)
+    model_config = ConfigDict(
+        # Track extra arguments in the :attribute:``model_extra``.
+        extra="allow",
+        # Allow population via alias or parameter name.
+        populate_by_name=True,
+        # Use enums by default.
+        use_enum_values=True,
+    )
 
 
 @dataclass(init=True, repr=True, eq=True)
