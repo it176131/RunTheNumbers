@@ -94,6 +94,24 @@ class MoldingMaterial(Enum):
     Fiberglass: str = "Fiberglass"
 
 
+class FinishType(Enum):
+    """Type of modling finish.
+
+    Can be one of the following:
+      - Primed
+      - Unfinished
+      - Finished
+      - Painted
+      - Stained
+    """
+
+    Primed: str = "Primed"
+    Unfinished: str = "Unfinished"
+    Finished: str = "Finished"
+    Painted: str = "Painted"
+    Stained: str = "Stained"
+
+
 class Trim(BaseModel):
     """Finish trim.
 
@@ -119,3 +137,4 @@ class Trim(BaseModel):
     trim_type: TrimType
     molding_user: MoldingUse
     material: MoldingMaterial
+    finish_type: FinishType
