@@ -144,3 +144,4 @@ class DoorKnob(BaseModel):
 
     typ: LockFunction
     brand: str
+    color: str
