@@ -62,6 +62,22 @@ class FrameMaterial(Enum):
     Composite: str = "Composite"
 
 
+class WindowUseType(Enum):
+    """What the window will be used for.
+
+    Can be one of the following:
+      - Replacement
+      - NewConstruction
+
+    New construction windows have additional parts that allow them to
+    attach to a wall's wooden frame. Replacement windows don't have
+    these parts because the frame is already in place.
+    """
+
+    Replacement: str = "Replacement"
+    NewConstruction: str = "NewConstruction"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -83,3 +99,4 @@ class Window(BaseModel):
     brand: str
     style: WindowStyle
     frame_material: FrameMaterial
+    window_use_type: WindowUseType
