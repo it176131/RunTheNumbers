@@ -134,6 +134,8 @@ class Trim(BaseModel):
     brand: str
     house_square_footage: float
     linear_footage: float
+    width: float
+    color: str
     trim_type: TrimType
     molding_user: MoldingUse
     material: MoldingMaterial
