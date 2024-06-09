@@ -122,4 +122,4 @@ class Door(BaseModel):
     height: float
     width: float
     finish: FinishType
-    door_handling: DoorHanding
+    door_handing: DoorHanding
