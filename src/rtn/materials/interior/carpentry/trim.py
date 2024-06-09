@@ -112,6 +112,36 @@ class FinishType(Enum):
     Stained: str = "Stained"
 
 
+class InstallationType(Enum):
+    """Type of molding installation.
+
+    Can be one of the following:
+      - Nail
+      - Glue
+      - Adhesive
+      - Screw
+      - PeelAndStick
+      - Clip
+      - Staple
+      - Interlocking
+      - ClickInterlocking
+      - FullyBondedAdhesive
+      - PerimeterBondAdhesive
+    """
+
+    Nail: str = "Nail"
+    Glue: str = "Glue"
+    Adhesive: str = "Adhesive"
+    Screw: str = "Screw"
+    PeelAndStick: str = "PeelAndStick"
+    Clip: str = "Clip"
+    Staple: str = "Staple"
+    Interlocking: str = "Interlocking"
+    ClickInterlocking: str = "ClickInterlocking"
+    FullyBondedAdhesive: str = "FullyBondedAdhesive"
+    PerimeterBondAdhesive: str = "PerimeterBondAdhesive"
+
+
 class Trim(BaseModel):
     """Finish trim.
 
@@ -140,3 +170,4 @@ class Trim(BaseModel):
     molding_user: MoldingUse
     material: MoldingMaterial
     finish_type: FinishType
+    installation_type: InstallationType
