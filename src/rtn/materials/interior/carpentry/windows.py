@@ -92,6 +92,32 @@ class Glazing(Enum):
     TriplePane: str = "TriplePane"
 
 
+class GlassType(Enum):
+    """Type of glass for the window.
+
+    Can be one of the following:
+      - Privacy
+      - LowEnergy
+      - Insulated
+      - Standard
+      - EnergyEfficient
+      - Patterned
+      - Tempered
+      - Tinted
+      - Toughened
+    """
+
+    Privacy: str = "Privacy"
+    LowEnergy: str = "LowEnergy"
+    Insulated: str = "Insulated"
+    Standard: str = "Standard"
+    EnergyEfficient: str = "EnergyEfficient"
+    Patterned: str = "Patterned"
+    Tempered: str = "Tempered"
+    Tinted: str = "Tinted"
+    Toughened: str = "Toughened"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -115,3 +141,4 @@ class Window(BaseModel):
     frame_material: FrameMaterial
     window_use_type: WindowUse
     glazing: Glazing
+    glass_type: GlassType
