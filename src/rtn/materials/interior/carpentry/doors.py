@@ -139,6 +139,12 @@ class LockStyle(Enum):
     Vintage: str = "Vintage"
 
 
+class StrikePlate(BaseModel):
+    """Door strike plate."""
+
+    cost: float
+
+
 class DoorKnob(BaseModel):
     """A door knob."""
 
