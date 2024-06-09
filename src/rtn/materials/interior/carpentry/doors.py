@@ -105,26 +105,6 @@ class DoorHanding(Enum):
     Reversible: str = "Reversible"
 
 
-class Door(BaseModel):
-    """A good carpenter can install an interior door in ~20 minutes.
-
-    French and sliding glass doors may take two to three hours. The
-    hourly rate a carpenter charges to install doors can be quite high.
-    """
-
-    cost: float
-    material: str
-    texture: TextureType
-    panels: int = Field(ge=0, le=8)
-    typ: DoorType
-    style: DoorStyle
-    brand: str
-    height: float
-    width: float
-    finish: FinishType
-    door_handing: DoorHanding
-
-
 class LockFunction(Enum):
     """Lock function of a door knob.
 
@@ -167,3 +147,24 @@ class DoorKnob(BaseModel):
     color: str
     style: LockStyle
     cost: float
+
+
+class Door(BaseModel):
+    """A good carpenter can install an interior door in ~20 minutes.
+
+    French and sliding glass doors may take two to three hours. The
+    hourly rate a carpenter charges to install doors can be quite high.
+    """
+
+    cost: float
+    material: str
+    texture: TextureType
+    panels: int = Field(ge=0, le=8)
+    typ: DoorType
+    style: DoorStyle
+    brand: str
+    height: float
+    width: float
+    finish: FinishType
+    door_handing: DoorHanding
+    door_knob: DoorKnob
