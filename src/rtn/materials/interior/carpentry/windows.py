@@ -142,3 +142,5 @@ class Window(BaseModel):
     window_use_type: WindowUse
     glazing: Glazing
     glass_type: GlassType
+    interior_color: str
+    exterior_color: str
