@@ -28,6 +28,24 @@ class TrimType(Enum):
     WindowCasing: str = "WindowCasing"
 
 
+class MoldingUse(Enum):
+    """Use of the molding.
+
+    Can be one of the following:
+      - Door
+      - Window
+      - Floor
+      - Ceiling
+      - General
+    """
+
+    Door: str = "Door"
+    Window: str = "Window"
+    Floor: str = "Floor"
+    Ceiling: str = "Ceiling"
+    General: str = "General"
+
+
 class Trim(BaseModel):
     """Finish trim.
 
@@ -47,7 +65,8 @@ class Trim(BaseModel):
     """
 
     cost: float
+    brand: str
     house_square_footage: float
     linear_footage: float
     trim_type: TrimType
-    brand: str
+    molding_user: MoldingUse
