@@ -7,7 +7,25 @@ Finish trim generally includes the following:
     - Window casing
 """
 
+from enum import Enum
+
 from pydantic.main import BaseModel
+
+
+class TrimType(Enum):
+    """Type of trim.
+
+    Can be one of the following:
+      - Baseboard
+      - CrownMolding
+      - DoorCasing
+      - WindowCasing
+    """
+
+    Baseboard: str = "Baseboard"
+    CrownMolding: str = "CrownMolding"
+    DoorCasing: str = "DoorCasing"
+    WindowCasing: str = "WindowCasing"
 
 
 class Trim(BaseModel):
@@ -31,3 +49,4 @@ class Trim(BaseModel):
     cost: float
     house_square_footage: float
     linear_footage: float
+    trim_type: TrimType
