@@ -136,6 +136,20 @@ class GridPattern(Enum):
     Cross: str = "Cross"
 
 
+class WindowType(Enum):
+    """Type of window.
+
+    Can be one of the following:
+      - Basement
+      - Security
+      - Other
+    """
+
+    Basement: str = "Basement"
+    Security: str = "Security"
+    Other: str = "Other"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -163,3 +177,4 @@ class Window(BaseModel):
     interior_color: str
     exterior_color: str
     grid_pattern: GridPattern
+    window_type: WindowType
