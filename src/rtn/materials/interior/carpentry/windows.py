@@ -29,6 +29,6 @@ class Window(BaseModel):
     installation. It is suggested to find a professional window
     installer looking for side work at night or on weekends and pay him
     an hourly rate for installation. Professional installers can
-    replace windows very quickly and paying hourly will keep the per-
-    window price to a minimum.
+    replace windows very quickly, and paying hourly will keep the
+    per-window price to a minimum.
     """
