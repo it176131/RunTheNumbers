@@ -62,7 +62,7 @@ class FrameMaterial(Enum):
     Composite: str = "Composite"
 
 
-class WindowUseType(Enum):
+class WindowUse(Enum):
     """What the window will be used for.
 
     Can be one of the following:
@@ -99,4 +99,4 @@ class Window(BaseModel):
     brand: str
     style: WindowStyle
     frame_material: FrameMaterial
-    window_use_type: WindowUseType
+    window_use_type: WindowUse
