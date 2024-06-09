@@ -68,6 +68,7 @@ class Door(BaseModel):
     """
 
     cost: float
+    material: str
     typ: DoorType
     style: DoorStyle
     brand: str
