@@ -118,6 +118,24 @@ class GlassType(Enum):
     Toughened: str = "Toughened"
 
 
+class GridPattern(Enum):
+    """Window grid pattern.
+
+    Can be one of the following:
+      - NoGrid
+      - Traditional
+      - Colonial
+      - EqualLight
+      - Cross
+    """
+
+    NoGrid: str = "NoGrid"
+    Traditional: str = "Traditional"
+    Colonial: str = "Colonial"
+    EqualLight: str = "EqualLight"
+    Cross: str = "Cross"
+
+
 class Window(BaseModel):
     """A Window.
 
@@ -144,3 +162,4 @@ class Window(BaseModel):
     glass_type: GlassType
     interior_color: str
     exterior_color: str
+    grid_pattern: GridPattern
