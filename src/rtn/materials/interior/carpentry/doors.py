@@ -123,3 +123,23 @@ class Door(BaseModel):
     width: float
     finish: FinishType
     door_handing: DoorHanding
+
+
+class KnobType(Enum):
+    """Type of door knob.
+
+    Can be one of the following:
+      - Privacy (i.e., bed/bath)
+      - Passage (i.e., hall/closet)
+      - Dummy (i.e., non-functioning)
+    """
+
+    Privacy: str = "Privacy"
+    Passage: str = "Passage"
+    Dummy: str = "Dummy"
+
+
+class DoorKnob(BaseModel):
+    """A door knob."""
+
+    typ: KnobType
