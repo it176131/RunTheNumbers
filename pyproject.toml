@@ -65,3 +65,7 @@ line-ending = "auto"
 [tool.mypy]
 warn_return_any = true
 warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = "scrapy.*"
+ignore_missing_imports = true
