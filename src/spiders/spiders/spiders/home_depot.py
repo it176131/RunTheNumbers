@@ -6,3 +6,7 @@ class HomeDepot(CrawlSpider):
 
     name: str = "homedepot"
     allowed_domains: list[str] | None = ["homedepot.com"]
+    start_urls = [
+        # Reference -> https://www.sitemaps.org/index.html
+        "https://www.homedepot.com/c/site_map",
+    ]
