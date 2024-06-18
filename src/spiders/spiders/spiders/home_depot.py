@@ -6,4 +6,3 @@ class HomeDepot(CrawlSpider):
 
     name: str = "homedepot"
     allowed_domains: list[str] | None = ["homedepot.com"]
-    start_urls: list[str] | None = None
